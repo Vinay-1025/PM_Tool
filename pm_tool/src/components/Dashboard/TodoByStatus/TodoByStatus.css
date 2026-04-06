@@ -1,0 +1,50 @@
+.todoStatus-card {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.todoStatus-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.todoStatus-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.todoStatus-table th,
+.todoStatus-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.todoStatus-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Status colors */
+.open {
+  color: var(--warning-color);
+}
+
+.progress {
+  color: var(--primary-color);
+}
+
+.done {
+  color: var(--success-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .todoStatus-table {
+    font-size: 12px;
+  }
+}

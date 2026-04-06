@@ -1,0 +1,11 @@
+.teamAnalytics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.teamAnalytics-chart {
+  width: 100%;
+  height: 180px; /* THIS FIXES THE ERROR */
+  min-height: 180px;
+}

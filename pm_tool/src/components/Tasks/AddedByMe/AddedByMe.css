@@ -1,0 +1,6 @@
+@import "../MyTodos/MyTodos.css";
+
+.status.todo {
+  background: rgba(47, 164, 169, 0.15);
+  color: var(--primary-color);
+}

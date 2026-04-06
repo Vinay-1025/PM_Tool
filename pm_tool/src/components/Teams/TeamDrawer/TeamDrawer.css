@@ -1,0 +1,143 @@
+/* Backdrop */
+.teamDrawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 999;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Drawer */
+.teamDrawer {
+  width: 440px;
+  max-width: 100%;
+  height: 100%;
+  background: var(--sidebar-bg);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  box-shadow: -12px 0 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.teamDrawer-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--sidebar-bg);
+  z-index: 2;
+}
+
+.teamDrawer-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.teamDrawer-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+/* Scrollable content */
+.teamDrawer-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+}
+
+/* Drawer cards */
+.drawer-card {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* Members */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.member-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Roles */
+.role {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-top: 2px;
+}
+
+.role.lead {
+  background: rgba(47, 164, 169, 0.15);
+  color: var(--primary-color);
+}
+
+.role.developer {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--success-color);
+}
+
+.role.qa {
+  background: rgba(249, 168, 37, 0.15);
+  color: var(--warning-color);
+}
+
+@media (max-width: 768px) {
+  .teamDrawer-backdrop {
+    align-items: flex-end;
+  }
+
+  .teamDrawer {
+    width: 100%;
+    height: 85vh;
+    border-radius: 20px 20px 0 0;
+    animation: slideUp 0.3s ease;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .teamDrawer-content {
+    padding: 14px;
+  }
+
+  .drawer-card {
+    padding: 14px;
+  }
+}

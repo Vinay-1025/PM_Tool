@@ -1,0 +1,159 @@
+.team-projects-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Team Card */
+.team-projects-card {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Header */
+.team-projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-projects-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.team-projects-count {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--hover-bg);
+  color: var(--text-muted);
+}
+
+/* Table Header */
+.team-projects-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  padding: 10px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Table Body */
+.team-projects-table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row */
+.team-projects-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+}
+
+.team-projects-row:last-child {
+  border-bottom: none;
+}
+
+/* Columns */
+.project-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.project-dates {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.project-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Status */
+.status-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.status-pill.active {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--success-color);
+}
+
+.status-pill.delayed {
+  background: rgba(239, 83, 80, 0.15);
+  color: var(--error-color);
+}
+
+.status-pill.completed {
+  background: rgba(66, 165, 245, 0.15);
+  color: var(--info-color);
+}
+
+/* Progress */
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--hover-bg);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+}
+
+/* Empty states */
+.team-projects-no-data {
+  padding: 14px;
+  font-size: 13px;
+  color: var(--text-muted);
+  background: var(--bg-color);
+  border-radius: 12px;
+}
+
+.team-projects-empty {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .team-projects-table-header {
+    display: none;
+  }
+
+  .team-projects-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    margin-bottom: 12px;
+  }
+
+  .project-progress {
+    justify-content: space-between;
+  }
+}

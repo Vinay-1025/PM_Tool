@@ -1,0 +1,32 @@
+.documentsTable-card {
+  background: var(--sidebar-bg);
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.documentsTable-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.documentsTable-card th,
+.documentsTable-card td {
+  padding: 14px 16px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.documentsTable-card th {
+  background: var(--hover-bg);
+  color: var(--text-muted);
+  text-align: left;
+}
+
+.category-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(47,164,169,.15);
+  color: var(--primary-color);
+}

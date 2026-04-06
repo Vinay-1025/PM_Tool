@@ -1,0 +1,57 @@
+.projectPhases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.projectPhase-card {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.projectPhase-card h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.current {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 6px 0 12px;
+}
+
+.phase-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.phase-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--hover-bg);
+}
+
+.phase-pill.active {
+  background: rgba(47,164,169,.15);
+  color: var(--primary-color);
+}
+
+.phase-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}

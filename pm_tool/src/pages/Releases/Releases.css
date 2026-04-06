@@ -1,0 +1,15 @@
+.releases-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.releases-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.releases-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+}

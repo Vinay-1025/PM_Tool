@@ -1,0 +1,26 @@
+.teams-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Desktop */
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .teams-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .teams-grid {
+    grid-template-columns: 1fr;
+  }
+}

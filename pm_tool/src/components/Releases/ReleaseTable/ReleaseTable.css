@@ -1,0 +1,97 @@
+.releaseTable-card {
+  background: var(--sidebar-bg);
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  padding: 16px;
+}
+
+.releaseTable-card h4 {
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.releaseTable-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 12px;
+  background: var(--hover-bg);
+}
+
+td {
+  padding: 12px;
+  font-size: 13px;
+  border-top: 1px solid var(--border-color);
+}
+
+.status-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.status-pill.completed {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--success-color);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.actions svg:hover {
+  color: var(--primary-color);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  table,
+  thead,
+  tbody,
+  tr,
+  td,
+  th {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    padding: 12px 0;
+  }
+
+  td {
+    padding: 6px 0;
+  }
+}
+
+.status-pill.success {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--success-color);
+}
+
+.status-pill.failed {
+  background: rgba(211, 47, 47, 0.15);
+  color: var(--error-color);
+}
+
+.status-pill.rolled-back {
+  background: rgba(249, 168, 37, 0.15);
+  color: var(--warning-color);
+}

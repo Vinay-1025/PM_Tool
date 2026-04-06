@@ -1,0 +1,50 @@
+{
+  "name": "azpm-tracker",
+  "displayName": "AZPM Developer Tracker",
+  "description": "Deep VS Code integration for the Enterprise PM Tool",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "azpm.startSession",
+        "title": "AZPM: Start Coding Session"
+      },
+      {
+        "command": "azpm.assignTask",
+        "title": "AZPM: Select Active Task"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "azpm",
+          "title": "AZPM Task Tracker",
+          "icon": "resources/icon.svg"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "18.x",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}

@@ -1,0 +1,22 @@
+.projectsTabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.projectsTab {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--sidebar-bg);
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.projectsTab.active {
+  background: rgba(47,164,169,0.15);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+

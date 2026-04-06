@@ -1,0 +1,40 @@
+.sprintsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sprintsHeader h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.sprintsHeader p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.sprintsHeader-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sprintsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sprintsHeader-btn {
+    width: 100%;
+  }
+}

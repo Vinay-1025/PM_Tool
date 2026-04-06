@@ -1,0 +1,70 @@
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 1000;
+}
+
+.drawer {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 420px;
+  height: 100%;
+  background: var(--sidebar-bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  margin-top: 16px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.detail-row span {
+  color: var(--text-muted);
+}
+
+.description {
+  margin: 12px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.comment-label {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.comment-box {
+  width: 94%;
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  resize: none;
+}
+
+.drawer footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}

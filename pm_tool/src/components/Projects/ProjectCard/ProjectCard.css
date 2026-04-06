@@ -1,0 +1,231 @@
+.projectCard {
+  position: relative;
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.projectCard:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.projectCard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.projectCard-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.projectCard-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.projectCard-menuDropdown {
+  position: absolute;
+  top: 36px;
+  right: 16px;
+  background: var(--bg-color, #0f172a);
+  border: 1px solid var(--border-color, #334155);
+  border-radius: 8px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.projectCard-menuDropdown button {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+  color: var(--text-color, #e2e8f0);
+  transition: background 0.2s ease, color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.projectCard-menuDropdown button:hover {
+  background: var(--hover-bg, #1e293b);
+  color: var(--primary-color, #38bdf8);
+}
+
+.projectCard-menuDropdown hr {
+  border: 0;
+  border-top: 1px solid var(--border-color, #334155);
+  margin: 4px 0;
+}
+
+.projectCard-menuDropdown button.danger:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.projectCard-statusRow {
+  display: flex;
+  gap: 8px;
+}
+
+.status-pill,
+.health-pill {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.status-pill.active {
+  background: rgba(47, 164, 169, 0.15);
+  color: var(--primary-color);
+}
+
+.status-pill.completed {
+  background: rgba(46, 125, 50, 0.15);
+  color: var(--success-color);
+}
+
+.health-pill.good {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--success-color);
+}
+
+.health-pill.risk {
+  background: rgba(249, 168, 37, 0.15);
+  color: var(--warning-color);
+}
+
+.projectCard-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.projectCard-progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.projectCard-progress {
+  flex: 1;
+  height: 6px;
+  background: var(--hover-bg);
+  border-radius: 6px;
+}
+
+.projectCard-progressFill {
+  height: 100%;
+  background: linear-gradient(90deg,
+      var(--primary-color),
+      var(--accent-color));
+}
+
+.projectCard-metricsRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.metric-chip {
+  background: var(--bg-tertiary, #1e293b);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.70rem;
+  font-weight: 500;
+  color: var(--text-secondary, #94a3b8);
+  border: 1px solid var(--border-color, #334155);
+}
+
+.projectCard-metaRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.projectCard-method {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--hover-bg);
+  font-size: 11px;
+}
+
+.projectCard-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projectCard-pm {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.projectCard-avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--sidebar-bg);
+  margin-left: -8px;
+}
+
+.avatar.primary {
+  background: var(--primary-color);
+}
+
+.avatar.secondary {
+  background: var(--secondary-color);
+}
+
+@media (max-width: 480px) {
+  .projectCard {
+    padding: 14px;
+  }
+
+  .projectCard-statusRow {
+    flex-wrap: wrap;
+  }
+
+  .projectCard-metaRow {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .projectCard-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .projectCard-avatars {
+    margin-left: 8px;
+  }
+}

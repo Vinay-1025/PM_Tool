@@ -1,0 +1,19 @@
+.kpiRow-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .kpiRow-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .kpiRow-container {
+    grid-template-columns: 1fr;
+  }
+}

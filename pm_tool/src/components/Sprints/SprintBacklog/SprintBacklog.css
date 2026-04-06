@@ -1,0 +1,33 @@
+.backlog-card {
+  background: var(--hover-bg);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 50px;
+}
+
+.backlog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.backlog-item {
+  background: var(--sidebar-bg);
+  padding: 10px 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  cursor: grab;
+}
+
+.pts {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .backlog-item {
+    font-size: 12px;
+  }
+}

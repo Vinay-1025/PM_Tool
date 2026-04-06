@@ -1,0 +1,23 @@
+.sprintsToolbar select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--sidebar-bg);
+  color: var(--text-color);
+  font-size: 13px;
+}
+
+.sprintsToolbar {
+  display: flex;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sprintsToolbar {
+    width: 100%;
+  }
+
+  .sprintsToolbar select {
+    width: 100%;
+  }
+}

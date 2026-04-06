@@ -1,0 +1,231 @@
+/* Backdrop */
+.project-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 3000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Drawer */
+.project-drawer {
+    width: 440px;
+    max-width: 100%;
+    height: 100%;
+    background: var(--sidebar-bg);
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    animation: projectDrawerSlideIn 0.25s ease;
+    pointer-events: auto;
+}
+
+@keyframes projectDrawerSlideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Header */
+.project-drawer-header {
+    position: sticky;
+    top: 0;
+    background: var(--sidebar-bg);
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.project-drawer-header h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.project-drawer-close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* Body */
+.project-drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--text-color) var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Footer */
+.project-drawer-footer {
+    position: sticky;
+    bottom: 0;
+    background: var(--sidebar-bg);
+    padding: 16px 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 12px;
+}
+
+/* Form */
+.project-drawer-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.project-drawer-form-group label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.project-drawer input,
+.project-drawer textarea,
+.project-drawer select {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.project-drawer textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Inline header */
+.project-drawer-inline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-drawer-link-btn {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.project-drawer-link-btn:hover {
+    background: var(--hover-bg);
+}
+
+/* Teams multiselect */
+.project-drawer-team-multiselect {
+    min-height: 96px;
+    max-height: 140px;
+    overflow-y: auto;
+}
+
+/* Team preview */
+.project-drawer-team-preview {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.project-drawer-section-label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.project-drawer-team-preview-group {
+    margin-top: 12px;
+}
+
+/* Avatars */
+.project-drawer-avatars-row {
+    display: flex;
+    margin-top: 8px;
+}
+
+.project-drawer-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -6px;
+    border: 2px solid var(--bg-color);
+}
+
+/* Dates */
+.project-drawer-date-row {
+    display: flex;
+    gap: 12px;
+}
+
+/* Buttons */
+.project-drawer-btn-primary,
+.project-drawer-btn-secondary {
+    flex: 1;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.project-drawer-btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.project-drawer-btn-secondary {
+    background: var(--hover-bg);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .project-drawer {
+        width: 100%;
+        height: 90vh;
+        border-radius: 20px 20px 0 0;
+        animation: projectDrawerSlideUp 0.3s ease;
+    }
+
+    @keyframes projectDrawerSlideUp {
+        from {
+            transform: translateY(100%);
+        }
+
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .project-drawer-date-row {
+        flex-direction: column;
+    }
+
+    .project-drawer-btn-primary,
+    .project-drawer-btn-secondary {
+        padding: 16px;
+    }
+}

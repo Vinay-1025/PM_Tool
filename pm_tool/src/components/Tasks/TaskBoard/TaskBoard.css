@@ -1,0 +1,28 @@
+.taskBoard {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(260px, 1fr));
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+}
+
+/* Smooth column snapping */
+.taskColumn {
+  scroll-snap-align: start;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .taskBoard {
+    grid-template-columns: repeat(5, minmax(240px, 1fr));
+  }
+}
+
+/* Mobile: vertical Kanban */
+@media (max-width: 768px) {
+  .taskBoard {
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
+  }
+}

@@ -1,0 +1,81 @@
+.kpiCard-card {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Header */
+.kpiCard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kpiCard-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Icon bubble */
+.kpiCard-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.kpiCard-icon.up {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: var(--success-color);
+}
+
+.kpiCard-icon.down {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--error-color);
+}
+
+/* Value */
+.kpiCard-value {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Trend */
+.kpiCard-trend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.kpiCard-trend.up {
+  color: var(--success-color);
+}
+
+.kpiCard-trend.down {
+  color: var(--error-color);
+}
+
+.kpiCard-trendText {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+  .kpiCard-value {
+    font-size: 24px;
+  }
+
+  .kpiCard-title {
+    font-size: 13px;
+  }
+}

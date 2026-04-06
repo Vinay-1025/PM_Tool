@@ -1,0 +1,17 @@
+.util-edit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.util-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.util-edit input {
+  width: 100%;
+  accent-color: var(--primary-color);
+}

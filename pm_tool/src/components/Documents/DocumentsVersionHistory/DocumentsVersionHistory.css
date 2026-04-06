@@ -1,0 +1,90 @@
+.versionHistory-card {
+  background: var(--sidebar-bg);
+  border-radius: 18px;
+  border: 1px solid var(--border-color);
+  padding: 16px;
+}
+
+.versionHistory-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* Table */
+.versionHistory-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.versionHistory-table th {
+  text-align: left;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--hover-bg);
+  padding: 12px;
+}
+
+.versionHistory-table td {
+  padding: 14px 12px;
+  font-size: 13px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Document name */
+.doc-name {
+  font-weight: 500;
+}
+
+/* Version badge */
+.version-badge {
+  padding: 4px 10px;
+  font-size: 11px;
+  border-radius: 999px;
+  background: rgba(47, 164, 169, 0.15);
+  color: var(--primary-color);
+}
+
+/* Action */
+.view-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: var(--hover-bg);
+  color: var(--text-color);
+}
+
+/* Hover */
+.versionHistory-table tbody tr:hover {
+  background: var(--hover-bg);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .versionHistory-table thead {
+    display: none;
+  }
+
+  .versionHistory-table,
+  .versionHistory-table tbody,
+  .versionHistory-table tr,
+  .versionHistory-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .versionHistory-table tr {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .versionHistory-table td {
+    padding: 6px 0;
+    border: none;
+  }
+}

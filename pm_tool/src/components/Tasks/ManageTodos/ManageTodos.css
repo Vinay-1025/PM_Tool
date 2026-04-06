@@ -1,0 +1,16 @@
+@import "../MyTodos/MyTodos.css";
+
+.manageBtn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.status.done {
+  background: rgba(22, 163, 74, 0.15);
+  color: var(--success-color);
+}

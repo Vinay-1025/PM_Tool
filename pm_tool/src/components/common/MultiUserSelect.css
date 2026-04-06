@@ -1,0 +1,21 @@
+.multi-select input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.multi-select-list {
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.multi-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.multi-item.active {
+  background: rgba(47,164,169,0.15);
+}

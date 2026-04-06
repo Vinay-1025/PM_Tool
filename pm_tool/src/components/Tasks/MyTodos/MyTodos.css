@@ -1,0 +1,34 @@
+.todoListCard {
+  background: var(--sidebar-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 16px;
+}
+
+.todoListCard h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.todoListCard table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.todoListCard th,
+.todoListCard td {
+  padding: 12px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.status.inprogress {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--warning-color);
+}

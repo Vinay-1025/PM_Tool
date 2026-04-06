@@ -1,0 +1,50 @@
+.todoPriority-card {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.todoPriority-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.todoPriority-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.todoPriority-table th,
+.todoPriority-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.todoPriority-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Priority colors */
+.high {
+  color: var(--error-color);
+}
+
+.medium {
+  color: var(--warning-color);
+}
+
+.low {
+  color: var(--success-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .todoPriority-table {
+    font-size: 12px;
+  }
+}

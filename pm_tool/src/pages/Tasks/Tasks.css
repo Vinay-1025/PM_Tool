@@ -1,0 +1,43 @@
+.tasks-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tasks-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.tasks-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.tasks-header p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.tasks-newBtn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .tasks-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tasks-newBtn {
+    width: 100%;
+  }
+}

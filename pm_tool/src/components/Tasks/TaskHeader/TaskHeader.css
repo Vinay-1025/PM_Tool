@@ -1,0 +1,57 @@
+.taskHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.taskHeader-left h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.taskHeader-left p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.taskHeader-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.searchBox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--sidebar-bg);
+}
+
+.searchBox input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.viewTabs {
+  display: flex;
+  gap: 6px;
+}
+
+.viewTabs button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--hover-bg);
+  cursor: pointer;
+}
+
+.viewTabs button.active {
+  background: var(--primary-color);
+  color: #fff;
+}

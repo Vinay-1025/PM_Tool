@@ -1,0 +1,35 @@
+.manageReleases-card {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 16px;
+}
+
+.manageReleases-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.manageReleases-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manageReleases-card th,
+.manageReleases-card td {
+  padding: 14px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.actions svg:hover {
+  color: var(--primary-color);
+}

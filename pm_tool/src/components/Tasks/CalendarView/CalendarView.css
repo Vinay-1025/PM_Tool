@@ -1,0 +1,163 @@
+.calendarView {
+    background: var(--sidebar-bg);
+    border-radius: 18px;
+    border: 1px solid var(--border-color);
+    padding: 16px;
+}
+
+/* Header */
+.calendarHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.calendarNav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calendarNav button {
+    color: var(--text-color);
+    background: var(--hover-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.calendarNav select,
+.calendarFilters select {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    font-size: 13px;
+}
+
+.calendarFilters {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Week Header */
+.calendarWeekHeader {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.calendarWeekDay {
+    background: var(--hover-bg);
+    border-radius: 12px;
+    padding: 12px 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Calendar Body */
+.calendarBody {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.calendarWeekRow {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+/* Day Cell */
+.calendarDay {
+    min-height: 90px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.calendarDay.today {
+    border-color: var(--primary-color);
+    background: rgba(47, 164, 169, 0.08);
+}
+
+.calendarDay .date {
+    font-weight: 600;
+}
+
+/* Spanning Tasks */
+.calendarWeekTasks {
+    position: absolute;
+    inset: 28px 0 auto 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    pointer-events: none;
+}
+
+.calendarSpanTask {
+    pointer-events: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+/* Status colors */
+.calendarSpanTask.todo {
+    background: var(--hover-bg);
+}
+
+.calendarSpanTask.progress {
+    background: rgba(47, 164, 169, 0.25);
+}
+
+.calendarSpanTask.review {
+    background: rgba(251, 191, 36, 0.3);
+}
+
+.calendarSpanTask.blocked {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+.calendarSpanTask.done {
+    background: rgba(34, 197, 94, 0.3);
+}
+
+/* Task modal */
+.taskDetailsOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4000;
+}
+
+.taskDetails {
+    background: var(--sidebar-bg);
+    padding: 20px;
+    width: 420px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.taskMeta {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 13px;
+}

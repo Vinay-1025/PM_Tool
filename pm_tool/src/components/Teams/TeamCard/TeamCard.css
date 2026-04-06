@@ -1,0 +1,122 @@
+.teamCard {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease;
+}
+
+.teamCard:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.teamCard-title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Pills */
+.teamCard-pills {
+  display: flex;
+  gap: 10px;
+}
+
+.teamCard-pills span {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--hover-bg);
+  color: var(--text-muted);
+}
+
+/* Sections */
+.teamCard-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Lead */
+.lead-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Avatars */
+.avatars-row {
+  display: flex;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--sidebar-bg);
+  margin-left: -8px;
+}
+
+.avatar.primary {
+  background: var(--primary-color);
+}
+
+/* Utilization */
+.teamCard-util {
+  margin-top: auto;
+}
+
+.util-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.util-bar {
+  height: 6px;
+  background: var(--hover-bg);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.util-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--success-color)
+  );
+}
+
+@media (max-width: 480px) {
+  .teamCard {
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .teamCard-pills {
+    flex-wrap: wrap;
+  }
+
+  .avatars-row {
+    margin-left: 6px;
+  }
+}

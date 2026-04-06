@@ -1,0 +1,25 @@
+.teamsToolbar {
+  display: flex;
+}
+
+.teamsToolbar-search {
+  min-width: 260px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--sidebar-bg);
+  color: var(--text-color);
+  font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .teamsToolbar {
+    width: 100%;
+  }
+
+  .teamsToolbar-search {
+    min-width: unset;
+    width: 100%;
+  }
+}

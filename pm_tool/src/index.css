@@ -1,0 +1,68 @@
+/* ===============================
+   GLOBAL THEME VARIABLES
+   Logo-aligned (Teal / Green / Blue)
+================================ */
+
+/* 🌞 Light Theme */
+:root {
+  /* Backgrounds */
+  --bg-color: #f7fafa;          /* Soft teal white */
+  --sidebar-bg: #ffffff;
+  --header-bg: #ffffff;
+
+  /* Text */
+  --text-color: #0f2a2e;        /* Deep teal-gray */
+  --text-muted: #5f7d85;
+
+  /* Borders & Hover */
+  --border-color: #e0eff2;
+  --hover-bg: #eef7f9;
+
+  /* Brand Colors (from logo) */
+  --primary-color: #2fa4a9;     /* Teal */
+  --secondary-color: #4caf50;   /* Green */
+  --accent-color: #2b7dbd;      /* Blue */
+
+  /* Status */
+  --success-color: #2e7d32;
+  --warning-color: #f9a825;
+  --error-color: #d32f2f;
+}
+
+/* 🌙 Dark Theme */
+[data-theme="dark"] {
+  /* Backgrounds */
+  --bg-color: #08181b;          /* Deep teal-black */
+  --sidebar-bg: #041114;
+  --header-bg: #041114;
+
+  /* Text */
+  --text-color: #e6f6f7;
+  --text-muted: #9fcfd3;
+
+  /* Borders & Hover */
+  --border-color: #0f2e34;
+  --hover-bg: #0f2e34;
+
+  /* Brand Colors */
+  --primary-color: #39c6c9;     /* Bright teal */
+  --secondary-color: #6fd38a;   /* Soft green */
+  --accent-color: #4aa3df;      /* Blue */
+
+  /* Status */
+  --success-color: #4caf50;
+  --warning-color: #ffca28;
+  --error-color: #ef5350;
+}
+
+/* ===============================
+   GLOBAL STYLES
+================================ */
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  scrollbar-width: none;
+}

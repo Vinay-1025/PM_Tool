@@ -1,0 +1,37 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Default: Desktop */
+.dashboard-row {
+  display: grid;
+  gap: 20px;
+}
+
+.dashboard-row-two {
+  grid-template-columns: 2fr 1fr;
+}
+
+.dashboard-row-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet (≤ 1024px) */
+@media (max-width: 1024px) {
+  .dashboard-row-two {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-row-three {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,134 @@
+.teamMembers-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grid */
+.teamMembers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Card */
+.memberCard {
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: box-shadow 0.25s ease;
+}
+
+.memberCard:hover {
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.memberCard-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.memberAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.memberInfo h4 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.role-pill {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  width: fit-content;
+  margin-top: 4px;
+  text-transform: capitalize;
+}
+
+/* Role colors */
+.role-pill.developer {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--success-color);
+}
+
+.role-pill.qa {
+  background: rgba(249, 168, 37, 0.15);
+  color: var(--warning-color);
+}
+
+.role-pill.designer {
+  background: rgba(66, 165, 245, 0.15);
+  color: var(--info-color);
+}
+
+.role-pill.lead {
+  background: rgba(47, 164, 169, 0.15);
+  color: var(--primary-color);
+}
+
+/* Meta */
+.memberMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+/* Capacity bar */
+.capacityBar {
+  height: 6px;
+  background: var(--hover-bg);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.capacityFill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--success-color)
+  );
+}
+
+.capacityFill.high {
+  background: linear-gradient(
+    90deg,
+    var(--warning-color),
+    var(--error-color)
+  );
+}
+
+/* Empty state */
+.teamMembers-empty {
+  text-align: center;
+  color: var(--text-muted);
+  padding: 40px 0;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .memberCard {
+    padding: 14px;
+  }
+}

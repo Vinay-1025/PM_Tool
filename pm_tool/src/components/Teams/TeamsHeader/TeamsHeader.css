@@ -1,0 +1,41 @@
+.teamsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.teamsHeader h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.teamsHeader p {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.teamsHeader-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.teamsHeader-btn:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .teamsHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .teamsHeader-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,47 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.modal {
+  background: var(--sidebar-bg);
+  padding: 20px;
+  width: 420px;
+  border-radius: 14px;
+  border: 1px solid var(--border-color);
+}
+
+.modal textarea {
+  width: 100%;
+  min-height: 90px;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.modalActions .primary {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 10px;
+}
+
+.modalActions .secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 10px;
+}
